@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Box Example</title>
+</head>
+<body>
+<h1>Select Organization</h1>
+<form th:action="@{/search}" method="get">
+    <label for="organization">Organization:</label>
+    <select id="organization" name = "organization">
+        <option value="서울">서울</option>
+        <option value="부산">부산</option>
+        <option value="울산">울산</option>
+        <option value="">없음</option>
+        <!-- Add more options as needed -->
+    </select>
+    <br>
+    <label for="minBudget">Min Budget:</label>
+    <input type="text" id="minBudget" name="minBudget">
+    <br>
+    <label for="maxBudget">Max Budget:</label>
+    <input type="text" id="maxBudget" name="maxBudget">
+    <br>
+    <button type="submit">Search</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Organization Policies</title>
+</head>
+<body>
+<h1>Policies for Selected Organization</h1>
+<table>
+  <thead>
+  <tr>
+    <th>ID</th>
+    <th>Business Name</th>
+    <th>Business Classification</th>
+    <th>Business Details</th>
+    <th>Business Support Budget</th>
+    <th>Business Support Organization Name</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="entity : ${policies}">
+    <td th:text="${entity.businessNumber}">test</td>
+    <td th:text="${entity.businessName}">test</td>
+    <td th:text="${entity.businessClassification}">test</td>
+    <td th:text="${entity.businessDetails}">test</td>
+    <td th:text="${entity.businessSupportBudget}">test</td>
+    <td th:text="${entity.businessSupportOrganizationName}">test</td>
+  </tr>
+  </tbody>
+</table>
+<a href="/">Back to Home</a>
+</body>
+</html>
